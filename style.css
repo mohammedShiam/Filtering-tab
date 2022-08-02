@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --sky-blue:rgb(6, 135, 255);
+    --white:#fff;
+    --dark:rgb(33, 33, 33);
+    --dark-light:rgb(239, 236, 236);
+}
+
+body{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding:0 2rem;
+}
+
+body > h1{
+    background-color: var(--sky-blue);
+    padding: 1rem;
+    color: var(--white);
+    text-align: center;
+    font-size: 33px;
+    margin-top: 0.2rem;
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+section ul{
+    display: flex;
+    list-style: none;
+    gap:.7rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+section ul li{
+    font-size: 18px;
+    padding:.6rem;
+    background-color: var(--dark-light);
+    color: var(--dark);
+    cursor: pointer;
+}
+section ul li:hover{
+    background-color: var(--sky-blue);
+    color: var(--white);
+    transition: .3s ease-in-out;
+}
+section ul li.active{
+    background-color: var(--sky-blue);
+    color: var(--white);
+    transition: .5s ease;
+}
+
+
+section div.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:.5rem;
+}
+section div img{
+    width: 100%;
+}
+section div img:hover{
+    opacity: .5;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.hide{
+    display: none;
+}
+
+footer{
+    margin: 2rem 0;
+    background-color: var(--dark-light);
+    text-align: center;
+}
+footer span{
+    display: block;
+    font-size: 14px;
+    padding: .5rem 0;
+}
+
+/* Media Quary */
+@media screen and (max-width:720px) {
+    section div.product{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media screen and (max-width:420px) {
+    section div.product{
+        grid-template-columns:1fr;
+    }
+}
